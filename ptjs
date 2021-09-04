@@ -1,8 +1,0 @@
-import pandas as pd
-import pandas.io.sql as sqlio
-import psycopg2
-
-conn = psycopg2.connect("host='{}' port={} dbname='{}' user={} password={}".format(host, port, dbname, username, pwd))
-sql = "select count(*) from table;"
-dat = sqlio.read_sql_query(sql, conn)
-conn = None
